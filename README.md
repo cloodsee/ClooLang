@@ -1,4 +1,4 @@
-####  Cloodsee's Language  ####
+#  Cloodsee's Language  #
 
 ===================
 
@@ -20,22 +20,31 @@
 - Only global variables. Keyword 'let' for declaration.
 - Affectation of variables.
 
+---
+
 ## FAQ
 
-- Do you plan on adding Floating Points ?
-- No, use ints dummy.
+- Q: Do you plan on adding Floating Points ?
+- A: No, use ints dummy.
+<br>
 
-- This is useless.
-- Yes.
+- Q: This is useless.
+- A: Yes.
+
+---
 
 ## Licenses
 
 Hell no, why would you even want to use this ?!
 
+---
+
 ## Building the program
 
 - Put the correct libraries in the '/lib' folder.
 - Use './build.bat'.
+
+---
 
 ## Launching the program
 
