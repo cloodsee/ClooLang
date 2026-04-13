@@ -1,0 +1,10 @@
+(
+  let i = 15
+  if (
+    print("te","st")
+    print(" num "+ i)
+    false
+  )
+  then "is not printed"
+  else print(" it ", "works ", true, println())
+)

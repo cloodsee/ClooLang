@@ -1,0 +1,1 @@
+java -jar ./ClooLang.jar %1 %2

@@ -1,0 +1,22 @@
+(
+	let test_string = "test"
+	if test_string == "test"
+	then (
+		print("Works")
+		println()
+		let i=0
+		while i<12
+		do (
+			i=i+1
+			if i>1
+			then (
+				print(" / ")
+			)
+			else 0
+			print("i = ", i)
+		)
+	)
+	else (
+		print("You're not supposed to be here !")
+	)
+)

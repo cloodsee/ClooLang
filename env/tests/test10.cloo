@@ -1,0 +1,5 @@
+(
+  print(12)
+  print("test")
+  println(15>12)
+)

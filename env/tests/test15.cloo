@@ -1,0 +1,9 @@
+(
+	let i = 0
+	while i < 12
+	do (
+		i = i+1
+		println(i)
+		i
+	)
+)
