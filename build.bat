@@ -1,6 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
 
+if "%1"=="clean" goto clean
+
 REM Create output directory if it doesn't exist
 if not exist out (
     mkdir out
@@ -11,6 +13,7 @@ echo Generating ANTLR sources
 echo =========================
 
 REM Run ANTLR on grammar file
+
 java -jar lib\antlr-4.13.1-complete.jar src/cloodsee/language/grammar/Tiggrammar.g4 -o src/generated/cloodsee/language/grammar
 
 echo =========================
@@ -26,13 +29,13 @@ for /R src %%f in (*.java) do (
 
 REM Compile
 javac -d out -cp "lib\antlr-4.13.1-complete.jar;lib\junit-4.12.jar;src;src\grammar" %SRC_FILES%
-IF NOT EXIST "./out/org" (
-cd lib && ^
-jar xf antlr-4.13.1-complete.jar && ^
-rmdir /Q /S META-INF && ^
-xcopy /S /I "org" "../out/org" && ^
-rmdir /Q /S org && ^
-cd ..
+if not exist "./out/org" (
+    cd lib
+    jar xf antlr-4.13.1-complete.jar
+    rmdir /Q /S META-INF
+    xcopy /S /I "org" "../out/org"
+    rmdir /Q /S org
+    cd ..
 )
 cd ./out
 jar cfm ../env/ClooLang.jar ../src/META-INF/MANIFEST.MF *
@@ -46,15 +49,13 @@ goto :eof
 
 
 :clean
-echo Cleaning output...
 
-if exist out (
-    rmdir /s /q out
-    mkdir out
+if exist "out" (
+    rmdir /s /q "out"
 )
 
-del /q src\grammar\*.java 2>nul
-del /q src\grammar\*.tokens 2>nul
-del /q src\grammar\*.interp 2>nul
+if exist "./src/generated" (
+    rmdir /Q /S "./src/generated"
+)
 
-echo Clean complete
+echo cleaned

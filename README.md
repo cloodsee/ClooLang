@@ -1,6 +1,6 @@
-#  Cloodsee's Language  #
+#  cloodsee's language  #
 
-===================
+---
 
 ## Description:
 
@@ -20,8 +20,6 @@
 - Only global variables. Keyword 'let' for declaration.
 - Affectation of variables.
 
----
-
 ## FAQ
 
 - Q: Do you plan on adding Floating Points ?
@@ -31,23 +29,17 @@
 - Q: This is useless.
 - A: Yes.
 
----
-
 ## Licenses
 
 Hell no, why would you even want to use this ?!
-
----
 
 ## Building the program
 
 - Put the correct libraries in the '/lib' folder.
 - Use './build.bat'.
 
----
-
 ## Launching the program
 
 - Go to the 'env' folder.
-- Simply run the jar with java and parameters (like /debug).
+- Simply run the jar with java. Follow with path to the cloo src then parameters (like /debug).
 

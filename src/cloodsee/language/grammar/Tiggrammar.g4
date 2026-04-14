@@ -40,7 +40,7 @@ expr returns [cloodsee.language.ast.ASTexpression node]
 // Constantes entières
 INT : [0-9]+ ;
 BOOL : 'true' | 'false' ;
-STR : ([a-zA-Z_])* ;
+STR : [a-zA-Z_]+ ;
 STRING : '"' (~[\r"])* '"';
 
 // Commentaires
